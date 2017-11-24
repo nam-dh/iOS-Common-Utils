@@ -10,6 +10,7 @@
 		F57828111FC7BAA200DB44A4 /* CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F578280F1FC7BAA200DB44A4 /* CommonUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57828181FC7C13000DB44A4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57828171FC7C13000DB44A4 /* Device.swift */; };
 		F5AA9DF01FC7D08700593C64 /* ClassExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AA9DEF1FC7D08700593C64 /* ClassExtensions.swift */; };
+		F5AA9DF71FC7D1EE00593C64 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AA9DF61FC7D1EE00593C64 /* Utilities.swift */; };
 		F5AC6BF41FC7CC7700E792EB /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +20,7 @@
 		F57828101FC7BAA200DB44A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F57828171FC7C13000DB44A4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		F5AA9DEF1FC7D08700593C64 /* ClassExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtensions.swift; sourceTree = "<group>"; };
+		F5AA9DF61FC7D1EE00593C64 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 				F57828171FC7C13000DB44A4 /* Device.swift */,
 				F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */,
 				F5AA9DEF1FC7D08700593C64 /* ClassExtensions.swift */,
+				F5AA9DF61FC7D1EE00593C64 /* Utilities.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				F57828181FC7C13000DB44A4 /* Device.swift in Sources */,
 				F5AA9DF01FC7D08700593C64 /* ClassExtensions.swift in Sources */,
+				F5AA9DF71FC7D1EE00593C64 /* Utilities.swift in Sources */,
 				F5AC6BF41FC7CC7700E792EB /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
