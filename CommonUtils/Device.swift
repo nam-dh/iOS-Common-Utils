@@ -35,7 +35,7 @@ public struct Device {
         return "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }
 
-    public var modelName: String {
+    public static var modelName: String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
