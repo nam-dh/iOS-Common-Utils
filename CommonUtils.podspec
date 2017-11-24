@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CommonUtils"
-  s.version      = "0.0.5"
+  s.version      = "0.0.7"
   s.summary      = "Common Utilities for iOS"
   s.description  = "Common Utilities for iOS App written in Swift"
   s.homepage     = "https://github.com/namperry/iOS_Common_Utilities"
