@@ -8,6 +8,16 @@
 
 import Foundation
 
+public struct AppInfo {
+    public static var name: String {
+        return Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? ""
+    }
+
+    public static var version: String {
+        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+    }
+}
+
 public struct Device {
     public static var uuid: String {
         return UIDevice.current.identifierForVendor?.uuidString ?? ""
@@ -20,8 +30,8 @@ public struct Device {
 
     public static let name: Name = UIDevice.current.userInterfaceIdiom == .phone ? .iPhone : .iPad
     public static let isSimulator: Bool = TARGET_OS_SIMULATOR != 0
-    public static let isiPhone: Bool = name == .iPhone
-    public static let isiPad: Bool = name == .iPad
+    public static let isPhone: Bool = name == .iPhone
+    public static let isPad: Bool = name == .iPad
 
     public static var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
@@ -29,6 +39,10 @@ public struct Device {
 
     public static var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
+    }
+
+    public static var osVersion: String {
+        return "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
     }
 
     public var modelName: String {
