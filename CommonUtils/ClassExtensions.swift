@@ -53,3 +53,14 @@ public extension UIBarButtonItem {
         return item
     }
 }
+
+public extension String {
+    public var url: URL? {
+        return URL(string: self)
+    }
+}
+
+public extension CGRect {
+    public var bounds: CGRect { return CGRect(origin: CGPoint.zero, size: size) }
+    public var center: CGPoint { return CGPoint(x: minX + bounds.midX, y: minY + bounds.midY) }
+}

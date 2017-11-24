@@ -32,7 +32,11 @@ public struct Utils {
     }
 
     public static func pathFileInDocumentDirectory(_ fileName: String) -> String {
-        return self.documentsDirectoryURL.appendingPathComponent(fileName).path
+        return urlFileInDocumentDirectory(fileName).path
+    }
+
+    public static func urlFileInDocumentDirectory(_ fileName: String) -> URL {
+        return self.documentsDirectoryURL.appendingPathComponent(fileName)
     }
 
     public static func removeFileInDocumentDirectory(fileName: String) {
@@ -51,5 +55,17 @@ public struct Utils {
 
     public static func localizedString(key: String) -> String {
         return NSLocalizedString(key, comment: "")
+    }
+
+    public static func randomString(length: Int) -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        var randomString = ""
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        return randomString
     }
 }
