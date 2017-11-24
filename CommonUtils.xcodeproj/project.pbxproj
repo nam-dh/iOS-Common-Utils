@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F57828111FC7BAA200DB44A4 /* CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F578280F1FC7BAA200DB44A4 /* CommonUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57828181FC7C13000DB44A4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57828171FC7C13000DB44A4 /* Device.swift */; };
+		F5AC6BF41FC7CC7700E792EB /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		F578280F1FC7BAA200DB44A4 /* CommonUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
 		F57828101FC7BAA200DB44A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F57828171FC7C13000DB44A4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				F578280F1FC7BAA200DB44A4 /* CommonUtils.h */,
 				F57828101FC7BAA200DB44A4 /* Info.plist */,
 				F57828171FC7C13000DB44A4 /* Device.swift */,
+				F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F57828181FC7C13000DB44A4 /* Device.swift in Sources */,
+				F5AC6BF41FC7CC7700E792EB /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

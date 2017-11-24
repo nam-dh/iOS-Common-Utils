@@ -8,16 +8,6 @@
 
 import Foundation
 
-public struct AppInfo {
-    public static var name: String {
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? ""
-    }
-
-    public static var version: String {
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-    }
-}
-
 public struct Device {
     public static var uuid: String {
         return UIDevice.current.identifierForVendor?.uuidString ?? ""
