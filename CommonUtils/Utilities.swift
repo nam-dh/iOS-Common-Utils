@@ -53,6 +53,19 @@ public struct Utils {
         }
     }
 
+    public static func storeImageToDocumentDirectory(image: UIImage, fileName: String) -> URL? {
+        guard let data = UIImagePNGRepresentation(image) else {
+            return nil
+        }
+        let fileName = Utils.urlFileInDocumentDirectory(fileName)
+        do {
+            try data.write(to: fileName)
+            return fileName
+        } catch {
+            return nil
+        }
+    }
+
     public static func localizedString(key: String) -> String {
         return NSLocalizedString(key, comment: "")
     }
