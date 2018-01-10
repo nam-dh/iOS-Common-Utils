@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Utils {
+public struct CommonUtils {
     @discardableResult
     public static func inline<T>(_ obj: T?, execute work: (T) -> Void) -> T? {
         guard let obj = obj else {
@@ -57,7 +57,7 @@ public struct Utils {
         guard let data = UIImagePNGRepresentation(image) else {
             return nil
         }
-        let fileName = Utils.urlFileInDocumentDirectory(fileName)
+        let fileName = self.urlFileInDocumentDirectory(fileName)
         do {
             try data.write(to: fileName)
             return fileName
