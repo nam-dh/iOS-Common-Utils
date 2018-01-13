@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DD81AEC200A0B57002A624C /* ExtendedNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */; };
+		3DD81AEE200A37B6002A624C /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD81AED200A37B6002A624C /* SearchEngine.swift */; };
 		F554FC691FC8050800C437DB /* InAppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554FC681FC8050800C437DB /* InAppReview.swift */; };
 		F57828111FC7BAA200DB44A4 /* CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F578280F1FC7BAA200DB44A4 /* CommonUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57828181FC7C13000DB44A4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57828171FC7C13000DB44A4 /* Device.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedNavBarViewController.swift; sourceTree = "<group>"; };
+		3DD81AED200A37B6002A624C /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
 		F554FC681FC8050800C437DB /* InAppReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReview.swift; sourceTree = "<group>"; };
 		F578280C1FC7BAA200DB44A4 /* CommonUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F578280F1FC7BAA200DB44A4 /* CommonUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				F5AA9DF61FC7D1EE00593C64 /* Utilities.swift */,
 				F554FC681FC8050800C437DB /* InAppReview.swift */,
 				F58BE8571FC823B50073C2BE /* ReceiptValidator.swift */,
+				3DD81AED200A37B6002A624C /* SearchEngine.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F57828181FC7C13000DB44A4 /* Device.swift in Sources */,
+				3DD81AEE200A37B6002A624C /* SearchEngine.swift in Sources */,
 				F58BE8581FC823B50073C2BE /* ReceiptValidator.swift in Sources */,
 				F5AA9DF01FC7D08700593C64 /* ClassExtensions.swift in Sources */,
 				F5AA9DF71FC7D1EE00593C64 /* Utilities.swift in Sources */,

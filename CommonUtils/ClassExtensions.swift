@@ -58,6 +58,12 @@ public extension String {
     public var url: URL? {
         return URL(string: self)
     }
+
+    public static let blankPageURL: String = "about:blank"
+
+    public var isBlankURL: Bool {
+        return self.isEmpty || self == String.blankPageURL
+    }
 }
 
 public extension CGRect {

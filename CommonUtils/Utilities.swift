@@ -81,4 +81,42 @@ public struct CommonUtils {
         }
         return randomString
     }
+
+    public static func getFaviconURL(domain: String) -> URL? {
+        if domain.isBlankURL {
+            return nil
+        } else {
+            let faviconPrefix = "http://www.google.com/s2/favicons?domain="
+            return "\(faviconPrefix)\(domain)".addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)?.url
+        }
+    }
+
+    public static func addSubview(subView: UIView, toView parentView: UIView) {
+        let topConstraint = NSLayoutConstraint(item: subView, attribute: .top, relatedBy: .equal, toItem: parentView, attribute: .top, multiplier: 1, constant: 0)
+        let bottomConstraint = NSLayoutConstraint(item: subView, attribute: .bottom, relatedBy: .equal, toItem: parentView, attribute: .bottom, multiplier: 1, constant: 0)
+        let leadingConstraint = NSLayoutConstraint(item: subView, attribute: .leading, relatedBy: .equal, toItem: parentView, attribute: .leading, multiplier: 1, constant: 0)
+        let trailingConstraint = NSLayoutConstraint(item: subView, attribute: .trailing, relatedBy: .equal, toItem: parentView, attribute: .trailing, multiplier: 1, constant: 0)
+        subView.frame = parentView.bounds
+        parentView.addSubview(subView)
+        parentView.addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
+        parentView.layoutIfNeeded()
+    }
+}
+
+// MARK: - Dispatch
+
+/// Utility class for safely dispatching to a queue.
+/// Currently only supports the main queue.
+final class DispatchQueueSafe {
+    private static var instance = DispatchQueueSafe()
+    static var main: DispatchQueueSafe {
+        return DispatchQueueSafe.instance
+    }
+    func sync(_ block: () -> ()) {
+        if Thread.isMainThread {
+            block()
+        } else {
+            DispatchQueue.main.sync(execute: block)
+        }
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 open class ExtendedNavBarViewController: UIViewController {
     @IBOutlet weak var navBarView: UIView!
-    var navBarColor = UIColor.white {
+    open var navBarColor = UIColor.white {
         didSet {
             navBarView.backgroundColor = self.navBarColor
         }
