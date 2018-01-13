@@ -66,6 +66,10 @@ public extension String {
     }
 }
 
+public extension URL {
+    public static let blankPage = URL(string: String.blankPageURL)
+}
+
 public extension CGRect {
     public var bounds: CGRect { return CGRect(origin: CGPoint.zero, size: size) }
     public var center: CGPoint { return CGPoint(x: minX + bounds.midX, y: minY + bounds.midY) }
