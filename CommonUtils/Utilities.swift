@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 public struct CommonUtils {
     @discardableResult
@@ -18,46 +19,11 @@ public struct CommonUtils {
         return obj
     }
 
-    public static var documentsDirectory: String {
-        return documentsDirectoryURL.absoluteString
-    }
-
-    public static var documentsDirectoryURL: URL {
-        return FileManager.default.urls(for:.documentDirectory, in: .userDomainMask)[0]
-    }
-
-    public static func isExistedInDocumentDirectory(_ fileName: String) -> Bool {
-        let filePath = pathFileInDocumentDirectory(fileName)
-        return FileManager.default.fileExists(atPath: filePath)
-    }
-
-    public static func pathFileInDocumentDirectory(_ fileName: String) -> String {
-        return urlFileInDocumentDirectory(fileName).path
-    }
-
-    public static func urlFileInDocumentDirectory(_ fileName: String) -> URL {
-        return self.documentsDirectoryURL.appendingPathComponent(fileName)
-    }
-
-    public static func removeFileInDocumentDirectory(fileName: String) {
-        guard isExistedInDocumentDirectory(fileName) else { return }
-        let filePath = pathFileInDocumentDirectory(fileName)
-        self.removeFile(at: filePath)
-    }
-
-    public static func removeFile(at path: String) {
-        do {
-            try FileManager.default.removeItem(atPath: path)
-        } catch {
-            print(error)
-        }
-    }
-
     public static func storeImageToDocumentDirectory(image: UIImage, fileName: String) -> URL? {
         guard let data = UIImagePNGRepresentation(image) else {
             return nil
         }
-        let fileName = self.urlFileInDocumentDirectory(fileName)
+        let fileName = FileManager.urlFileInDocumentDirectory(fileName)
         do {
             try data.write(to: fileName)
             return fileName
@@ -100,6 +66,24 @@ public struct CommonUtils {
         parentView.addSubview(subView)
         parentView.addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
         parentView.layoutIfNeeded()
+    }
+
+    public static func getScreenshotOfVideo(url: URL) -> UIImage? {
+        let asset = AVURLAsset(url: url)
+        return getScreenshotOfVideo(asset: asset)
+    }
+
+    public static func getScreenshotOfVideo(asset: AVAsset) -> UIImage? {
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        imageGenerator.appliesPreferredTrackTransform = true
+        let time = CMTimeMake(5, 1)
+        do {
+            let imageRef = try imageGenerator.copyCGImage(at: time, actualTime: nil)
+            let thumbnail = UIImage(cgImage: imageRef)
+            return thumbnail
+        } catch {
+            return nil
+        }
     }
 }
 

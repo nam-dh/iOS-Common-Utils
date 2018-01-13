@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2D3CA22070B2A200FD5960 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D3CA12070B2A200FD5960 /* FileManagerExtension.swift */; };
 		3DD81AEC200A0B57002A624C /* ExtendedNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */; };
 		3DD81AEE200A37B6002A624C /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD81AED200A37B6002A624C /* SearchEngine.swift */; };
+		3DE0D4322054D3E8002838C6 /* XibInitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0D4312054D3E8002838C6 /* XibInitView.swift */; };
+		F52DAA86204D68CC003F9834 /* DiskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DAA85204D68CC003F9834 /* DiskStatus.swift */; };
 		F554FC691FC8050800C437DB /* InAppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554FC681FC8050800C437DB /* InAppReview.swift */; };
 		F57828111FC7BAA200DB44A4 /* CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F578280F1FC7BAA200DB44A4 /* CommonUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57828181FC7C13000DB44A4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57828171FC7C13000DB44A4 /* Device.swift */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2D3CA12070B2A200FD5960 /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedNavBarViewController.swift; sourceTree = "<group>"; };
 		3DD81AED200A37B6002A624C /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
+		3DE0D4312054D3E8002838C6 /* XibInitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInitView.swift; sourceTree = "<group>"; };
+		F52DAA85204D68CC003F9834 /* DiskStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskStatus.swift; sourceTree = "<group>"; };
 		F554FC681FC8050800C437DB /* InAppReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReview.swift; sourceTree = "<group>"; };
 		F578280C1FC7BAA200DB44A4 /* CommonUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F578280F1FC7BAA200DB44A4 /* CommonUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */,
+				3DE0D4312054D3E8002838C6 /* XibInitView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -70,12 +77,14 @@
 		F578280E1FC7BAA200DB44A4 /* CommonUtils */ = {
 			isa = PBXGroup;
 			children = (
-				3DD81AEA200A0B3E002A624C /* UI */,
 				F578280F1FC7BAA200DB44A4 /* CommonUtils.h */,
+				3DD81AEA200A0B3E002A624C /* UI */,
+				F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */,
 				F57828101FC7BAA200DB44A4 /* Info.plist */,
 				F57828171FC7C13000DB44A4 /* Device.swift */,
-				F5AC6BF31FC7CC7700E792EB /* AppInfo.swift */,
+				F52DAA85204D68CC003F9834 /* DiskStatus.swift */,
 				F5AA9DEF1FC7D08700593C64 /* ClassExtensions.swift */,
+				3D2D3CA12070B2A200FD5960 /* FileManagerExtension.swift */,
 				F5AA9DF61FC7D1EE00593C64 /* Utilities.swift */,
 				F554FC681FC8050800C437DB /* InAppReview.swift */,
 				F58BE8571FC823B50073C2BE /* ReceiptValidator.swift */,
@@ -128,7 +137,7 @@
 					F578280B1FC7BAA200DB44A4 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -164,7 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE0D4322054D3E8002838C6 /* XibInitView.swift in Sources */,
+				3D2D3CA22070B2A200FD5960 /* FileManagerExtension.swift in Sources */,
 				F57828181FC7C13000DB44A4 /* Device.swift in Sources */,
+				F52DAA86204D68CC003F9834 /* DiskStatus.swift in Sources */,
 				3DD81AEE200A37B6002A624C /* SearchEngine.swift in Sources */,
 				F58BE8581FC823B50073C2BE /* ReceiptValidator.swift in Sources */,
 				F5AA9DF01FC7D08700593C64 /* ClassExtensions.swift in Sources */,
@@ -296,9 +308,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 54ZKDNV948;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -308,6 +320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndsoft.CommonUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -320,9 +333,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 54ZKDNV948;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -332,6 +345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndsoft.CommonUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

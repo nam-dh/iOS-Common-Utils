@@ -73,4 +73,41 @@ public extension URL {
 public extension CGRect {
     public var bounds: CGRect { return CGRect(origin: CGPoint.zero, size: size) }
     public var center: CGPoint { return CGPoint(x: minX + bounds.midX, y: minY + bounds.midY) }
+
+    public init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
+        self.init()
+        self.origin = CGPoint(x: x, y: y)
+        self.size = CGSize(width: width, height: height)
+    }
+
+    public init(_ x: Int, _ y: Int, _ width: Int, _ height: Int) {
+        self.init()
+        self.origin = CGPoint(x: CGFloat(x), y: CGFloat(y))
+        self.size = CGSize(width: CGFloat(width), height: CGFloat(height))
+    }
+
+    public init(_ x: Double, _ y: Double, _ width: Double, _ height: Double) {
+        self.init()
+        self.origin = CGPoint(x: CGFloat(x), y: CGFloat(y))
+        self.size = CGSize(width: CGFloat(width), height: CGFloat(height))
+    }
+
+    public func set(x: CGFloat? = nil, y: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat? = nil) -> CGRect {
+        return CGRect(x ?? minX, y ?? minY, width ?? self.width, height ?? self.height)
+    }
+}
+
+public extension UIViewController {
+    public func removeBackButtonTitle() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+}
+
+public extension UIBarButtonItem {
+    public var frame: CGRect? {
+        guard let view = self.value(forKey: "view") as? UIView else {
+            return nil
+        }
+        return view.frame
+    }
 }
