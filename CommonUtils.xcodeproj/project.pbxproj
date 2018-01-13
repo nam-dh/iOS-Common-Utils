@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DD81AEC200A0B57002A624C /* ExtendedNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */; };
 		F554FC691FC8050800C437DB /* InAppReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554FC681FC8050800C437DB /* InAppReview.swift */; };
 		F57828111FC7BAA200DB44A4 /* CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F578280F1FC7BAA200DB44A4 /* CommonUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57828181FC7C13000DB44A4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57828171FC7C13000DB44A4 /* Device.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedNavBarViewController.swift; sourceTree = "<group>"; };
 		F554FC681FC8050800C437DB /* InAppReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReview.swift; sourceTree = "<group>"; };
 		F578280C1FC7BAA200DB44A4 /* CommonUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F578280F1FC7BAA200DB44A4 /* CommonUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DD81AEA200A0B3E002A624C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3DD81AEB200A0B57002A624C /* ExtendedNavBarViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		F57828021FC7BAA100DB44A4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		F578280E1FC7BAA200DB44A4 /* CommonUtils */ = {
 			isa = PBXGroup;
 			children = (
+				3DD81AEA200A0B3E002A624C /* UI */,
 				F578280F1FC7BAA200DB44A4 /* CommonUtils.h */,
 				F57828101FC7BAA200DB44A4 /* Info.plist */,
 				F57828171FC7C13000DB44A4 /* Device.swift */,
@@ -155,6 +166,7 @@
 				F5AA9DF01FC7D08700593C64 /* ClassExtensions.swift in Sources */,
 				F5AA9DF71FC7D1EE00593C64 /* Utilities.swift in Sources */,
 				F554FC691FC8050800C437DB /* InAppReview.swift in Sources */,
+				3DD81AEC200A0B57002A624C /* ExtendedNavBarViewController.swift in Sources */,
 				F5AC6BF41FC7CC7700E792EB /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
