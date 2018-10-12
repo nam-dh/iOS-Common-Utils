@@ -20,7 +20,7 @@ public struct CommonUtils {
     }
 
     public static func storeImageToDocumentDirectory(image: UIImage, fileName: String) -> URL? {
-        guard let data = UIImagePNGRepresentation(image) else {
+        guard let data = image.pngData() else {
             return nil
         }
         let fileName = FileManager.urlFileInDocumentDirectory(fileName)
@@ -76,7 +76,7 @@ public struct CommonUtils {
     public static func getScreenshotOfVideo(asset: AVAsset) -> UIImage? {
         let imageGenerator = AVAssetImageGenerator(asset: asset)
         imageGenerator.appliesPreferredTrackTransform = true
-        let time = CMTimeMake(5, 1)
+        let time = CMTimeMake(value: 5, timescale: 1)
         do {
             let imageRef = try imageGenerator.copyCGImage(at: time, actualTime: nil)
             let thumbnail = UIImage(cgImage: imageRef)
