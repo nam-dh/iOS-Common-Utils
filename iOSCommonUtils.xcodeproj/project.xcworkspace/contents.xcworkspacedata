@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CommonUtils.xcodeproj">
+      location = "self:iOSCommonUtils.xcodeproj">
    </FileRef>
 </Workspace>

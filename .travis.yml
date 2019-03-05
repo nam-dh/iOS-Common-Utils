@@ -1,0 +1,28 @@
+language: swift
+os: osx
+osx_image: xcode10.1
+xcode_project: iOSCommonUtils.xcodeproj
+xcode_sdk: iphonesimulator12.1
+notifications:
+  email: false
+env:
+  global:
+  - FRAMEWORK_NAME=iOSCommonUtils
+script:
+- xcodebuild -project iOSCommonUtils.xcodeproj -scheme iOSCommonUtils -configuration Test
+  -sdk iphonesimulator CONFIGURATION_BUILD_DIR=. clean build
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: ByM3s4IovwqdBfucM6CyYCQH5LbB9WmKhsR43szOBbDYHEgH990tvH2izUyDcCqlp8LOn3JcHwrvNYj7MVwsUw8c3zUlRKTyx5YD0DWJsjMVc+4OpRS4TMOaHsQv3P+wg8Bh1Em7W7dmyIjoHEEV296cRkQbYeSs1U4udMlBDmD5EriPwgNKnf+VLy92FU2POWNplJ2GnbsEru2SPPgvIUK4yd3S/3ckEediQoNT2OOSrmHQh1DdH+Kpx01KUojshmK+846xkkyvV22GTTBqMEXDrTJ08+ie2UQSnJ89F/AxJ1fYLqlsP7eF3i9eSrRUskEHy1VvW6xuph3RN0ragE4dKQokEGYSqUe9dTfIvb8VhC6l3FM0xzB3MXFwKqc4cjwbaAZtSPuACfxYQFYWUm4IBgxFwdkKG02STAwMjIgwJRtjZYhqxD2EUz1uWDLWbyZnMN4ecJU+eRR+ETMQK0tyAtd2IcGKApJHqjriMHSMPpuVBIodbT4un/0ItXi24fP7UCC/lsjZqq2mThNp8jz/nP7eB7JxxA2uGYj/UFWKwtuZOBJnilJHlrWIpcLWx0ha2C0SqRsJZ97ln8RwCI59OrD7wsG7VVivMIiYMxb//128uy46gz9CwTvvr98mmP4JQxRCIG1aY+p206yf1Os8Gy30lkGqT1gkcxR9cBs=
+  file: iOSCommonUtils.framework.zip
+  skip_cleanup: true
+  on:
+    repo: nam-dh/iOS-Common-Utils
+    tags: true
