@@ -86,21 +86,3 @@ public struct CommonUtils {
         }
     }
 }
-
-// MARK: - Dispatch
-
-/// Utility class for safely dispatching to a queue.
-/// Currently only supports the main queue.
-public final class DispatchQueueSafe {
-    private static var instance = DispatchQueueSafe()
-    public static var main: DispatchQueueSafe {
-        return DispatchQueueSafe.instance
-    }
-    public func sync(_ block: () -> ()) {
-        if Thread.isMainThread {
-            block()
-        } else {
-            DispatchQueue.main.sync(execute: block)
-        }
-    }
-}
