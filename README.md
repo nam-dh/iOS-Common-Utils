@@ -11,7 +11,7 @@ Currently iOSCommonUtils supports installation via the package managers [Carthag
 
 - Add the followings to your Cartfile:
     ```ruby
-    github "nam-dh/iOS-Common-Utils" ~> 0.5.0
+    github "nam-dh/iOS-Common-Utils" ~> 0.6.0
     ```
 - Run `carthage update`.
 
@@ -21,7 +21,7 @@ Currently iOSCommonUtils supports installation via the package managers [Carthag
 - Add the followings to your Podfile:
     ```ruby
     use_frameworks!
-    pod 'iOSCommonUtils', '~> 0.5.0'
+    pod 'iOSCommonUtils', '~> 0.6.0'
     ```
 - Run `pod install`.
 
