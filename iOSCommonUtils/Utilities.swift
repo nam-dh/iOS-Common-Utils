@@ -19,19 +19,6 @@ public struct CommonUtils {
         return obj
     }
 
-    public static func storeImageToDocumentDirectory(image: UIImage, fileName: String) -> URL? {
-        guard let data = image.pngData() else {
-            return nil
-        }
-        let fileName = FileManager.urlFileInDocumentDirectory(fileName)
-        do {
-            try data.write(to: fileName)
-            return fileName
-        } catch {
-            return nil
-        }
-    }
-
     public static func localizedString(key: String) -> String {
         return NSLocalizedString(key, comment: "")
     }
@@ -66,23 +53,5 @@ public struct CommonUtils {
         parentView.addSubview(subView)
         parentView.addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
         parentView.layoutIfNeeded()
-    }
-
-    public static func getScreenshotOfVideo(url: URL) -> UIImage? {
-        let asset = AVURLAsset(url: url)
-        return getScreenshotOfVideo(asset: asset)
-    }
-
-    public static func getScreenshotOfVideo(asset: AVAsset) -> UIImage? {
-        let imageGenerator = AVAssetImageGenerator(asset: asset)
-        imageGenerator.appliesPreferredTrackTransform = true
-        let time = CMTimeMake(value: 5, timescale: 1)
-        do {
-            let imageRef = try imageGenerator.copyCGImage(at: time, actualTime: nil)
-            let thumbnail = UIImage(cgImage: imageRef)
-            return thumbnail
-        } catch {
-            return nil
-        }
     }
 }
