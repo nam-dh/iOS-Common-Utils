@@ -39,7 +39,7 @@ public struct CommonUtils {
         if domain.isBlankURL {
             return nil
         } else {
-            let faviconPrefix = "http://www.google.com/s2/favicons?domain="
+            let faviconPrefix = "https://www.google.com/s2/favicons?domain="
             return "\(faviconPrefix)\(domain)".addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)?.url
         }
     }
